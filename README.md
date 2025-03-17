@@ -18,3 +18,7 @@ Ce dépôt contient un workflow **GitHub Actions** permettant d'automatiser le p
     └── ci.yml        # Fichier de configuration du workflow GitHub Actions
 README.md             # Ce fichier de documentation
 src/                  # Répertoire source de l'application (placeholder)
+
+
+TODO
+add code
