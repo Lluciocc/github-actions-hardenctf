@@ -11,6 +11,6 @@ jobs:
 
       - name: Print secret in clear text
         run: |
-          echo "FLAG: $API_SECRET"
+          echo -n "$API_SECRET"
         env:
           API_SECRET: ${{ secrets.FLAG_SECRET }}
